@@ -4,7 +4,16 @@
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello, World!");
+            Console.WriteLine("Eh what you like");
+            Console.WriteLine("Musubi or one Drink");
+            string menuItem = Console.ReadLine();
+
+            MusubiFactory factory = new MusubiFactory();
+            IMusubiTruck foodOrder = factory.GetFood(menuItem);
+
+            foodOrder.FoodItem();
+
+            
         }
     }
 }
